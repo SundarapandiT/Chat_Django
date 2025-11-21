@@ -1,1 +1,1 @@
-web: daphne -b 0.0.0.0 -p $PORT chat_project.asgi:application
+web: python -m daphne -b 0.0.0.0 -p ${PORT:-8000} chat_project.asgi:application
