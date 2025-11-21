@@ -429,6 +429,7 @@ body {
     display: flex;
     flex-direction: column;
     background: white;
+    position: relative;
 }
 
 .chat-header {
@@ -743,9 +744,14 @@ body {
 
 /* Message Input */
 .message-input-container {
-    border-top: 1px solid #e0e0e0;
-    background: white;
+    position: sticky;
+    bottom: 0;
+    background: #fff;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    z-index: 10;
 }
+
 
 .reply-bar {
     display: flex;
