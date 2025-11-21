@@ -121,11 +121,11 @@ else:
 # ===================================================================
 # REDIS/CHANNELS - FIXED FOR RAILWAY
 # ===================================================================
-REDIS_URL = os.environ.get('REDIS_URL', 'redis://localhost:6379')
+REDIS_URL = os.environ.get('REDIS_URL')
 
-# Ensure REDIS_URL has proper format
-if REDIS_URL and not REDIS_URL.startswith('redis://'):
-    REDIS_URL = f'redis://{REDIS_URL}'
+if not REDIS_URL:
+    REDIS_URL = "redis://localhost:6379"   # fallback for local dev
+
 
 CHANNEL_LAYERS = {
     'default': {
