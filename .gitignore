@@ -1,0 +1,360 @@
+# ==================================================
+# DJANGO CHAT APPLICATION - .gitignore
+# ==================================================
+
+# ==================================================
+# Python
+# ==================================================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# ==================================================
+# Django
+# ==================================================
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Django migrations (KEEP migrations folder, IGNORE if needed)
+# */migrations/*.py
+# */migrations/*.pyc
+# !*/migrations/__init__.py
+
+# Django static files (collected by collectstatic)
+/staticfiles/
+/static_root/
+
+# Django media files (user uploads)
+/media/
+
+# ==================================================
+# Environment Variables
+# ==================================================
+.env
+.env.*
+.env.local
+.env.production
+.env.development
+!.env.example
+
+# ==================================================
+# Virtual Environments
+# ==================================================
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+pyvenv.cfg
+
+# Virtualenv
+.Python
+
+# ==================================================
+# IDE / Editors
+# ==================================================
+
+# VS Code
+.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+.idea_modules/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+.*.sw?
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ==================================================
+# Operating System
+# ==================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+
+# ==================================================
+# Node.js (if using React frontend)
+# ==================================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# React build
+frontend/build/
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# ==================================================
+# Docker
+# ==================================================
+*.log
+docker-compose.override.yml
+
+# Ignore docker volumes data (but keep volume definitions)
+postgres_data/
+redis_data/
+
+# ==================================================
+# Redis
+# ==================================================
+dump.rdb
+*.rdb
+
+# ==================================================
+# PostgreSQL
+# ==================================================
+*.sql
+*.dump
+
+# ==================================================
+# Jupyter Notebook
+# ==================================================
+.ipynb_checkpoints
+*.ipynb
+
+# ==================================================
+# Celery
+# ==================================================
+celerybeat-schedule
+celerybeat.pid
+
+# ==================================================
+# Logs
+# ==================================================
+*.log
+logs/
+*.out
+
+# ==================================================
+# Temporary Files
+# ==================================================
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+
+# ==================================================
+# Documentation Build
+# ==================================================
+docs/_build/
+site/
+
+# ==================================================
+# Certificates / Keys
+# ==================================================
+*.pem
+*.key
+*.crt
+*.cer
+*.p12
+*.pfx
+
+# ==================================================
+# Backup Files
+# ==================================================
+*.backup
+*.old
+*.orig
+
+# ==================================================
+# Compressed Files
+# ==================================================
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# ==================================================
+# Package Managers
+# ==================================================
+poetry.lock
+Pipfile.lock
+
+# ==================================================
+# Testing
+# ==================================================
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+
+# ==================================================
+# Security
+# ==================================================
+secrets.json
+.secrets
+credentials.json
+
+# ==================================================
+# Miscellaneous
+# ==================================================
+.DS_Store
+*.pyc
+*.pyo
+*.pyd
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Profiling
+*.prof
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# ==================================================
+# Project Specific
+# ==================================================
+
+# Keep these directories but ignore their contents
+media/*
+!media/.gitkeep
+
+staticfiles/*
+!staticfiles/.gitkeep
+
+# Ignore collected static files but keep static source
+/staticfiles/
+!/static/
+
+# Ignore all media uploads
+/media/avatars/
+/media/attachments/
+
+# Ignore database backups
+*.dump
+*.sql.gz
+
+# Ignore any local configuration
+local_settings.py
+settings_local.py
+
+# Ignore test databases
+test_*.db
+
+# ==================================================
+# Optional: Uncomment if needed
+# ==================================================
+
+# Ignore all migrations (NOT RECOMMENDED for team projects)
+# */migrations/*.py
+# */migrations/*.pyc
+# !*/migrations/__init__.py
+
+# Ignore SQLite databases completely
+# *.sqlite3
+# *.db
+
+# Ignore all environment files
+# .env*
+
+# ==================================================
+# Keep These Files (Override ignore)
+# ==================================================
+!.gitkeep
+!README.md
+!requirements.txt
+!manage.py
+!.env.example
+
+
+
+# git init
+# git add .
+# git commit -m "Initial commit"
+# git branch -M main
+# git remote add origin https://github.com/yourusername/chat-app.git
+# git push -u origin main
