@@ -1,1 +1,1 @@
-web: gunicorn chat_project.wsgi:application --bind 0.0.0.0:$PORT --timeout 120 --log-level debug
+web: sh -c "daphne -b 0.0.0.0 -p \${PORT:-8000} chat_project.asgi:application"
